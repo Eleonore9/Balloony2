@@ -39,8 +39,8 @@ body {
 }
 /* ----- BALLOONY ------ */
 .balloony {
-	height: 10%;
-	width: 10%;
+	height: 15%;
+	width: 12%;
 	z-index: 100;
 }
 /* ----- CLOUDS ------ */
