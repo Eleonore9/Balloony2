@@ -39,8 +39,11 @@ body {
 }
 /* ----- BALLOONY ------ */
 .balloony {
-	height: 15%;
-	width: 12%;
+	height: 14%;
+	width: 8%;
+	position: absolute;
+	top: 320px;
+	left: 380px;
 	z-index: 100;
 }
 /* ----- CLOUDS ------ */
@@ -48,8 +51,6 @@ body {
 	height: 15%;
 	width: 10%;
 	position: absolute;
-/*	top: -200px;
-	left: -100px;*/
 	z-index: 100;
 	opacity: 0.8;
 
@@ -57,30 +58,19 @@ body {
        -moz-animation: small_slide 2s linear infinite;
             animation: small_slide 2s linear infinite;
 }
-.cloud:nth-child(2n) {
-	top: 760px;
-	left: 760px;
-}
-.cloud:nth-child(3n+1) {
+.cloud:nth-of-type(1) {
 	top: 360px;
 	left: 550px;
 }
-.cloud:nth-child(2n+1) {
+.cloud:nth-of-type(2) {
 	top: 560px;
 	left: 950px;
 }
-/*.cloud:nth-child(1n) {
-	top: -180px;
-	left: -120px;
+.cloud:nth-of-type(3) {
+	top: 760px;
+	left: 750px;
 }
-.cloud:nth-child(2n) {
-	top: -390px;
-	left: -100px;
-}
-.cloud:nth-child(3n) {
-	top: -580px;
-	left: 130px;
-}*/
+
 /* ----- clouds animation ----- */
 @keyframes small_slide {
 	50% {
