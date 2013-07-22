@@ -6,7 +6,9 @@ $(document).ready(function() {
         switch(parseInt(key.which,10)) {
             case 76:
     		if(position.left === 580 && position.top === 320) {
-	        	$('.balloony, .cloud.first').animate({left: "-=100px"}, 'slow');
+			$('.cloud:nth-of-type(1)').addClass('noanimation');
+	        	$('.balloony, .cloud:nth-of-type(1)').animate({left: "-=100px"}, 'slow');
+	        	//$('.balloony, .cloud.first').animate({left: "-=100px"}, 'slow');
 		} else {   
                 $('.balloony').animate({left: "-=100px"}, 'slow');}
 		break;
@@ -18,7 +20,9 @@ $(document).ready(function() {
 		break;
 	    case 82:
     		if(position.left === 580 && position.top === 320) {
-		    $('.balloony, .cloud.first').animate({left: "+=100px"}, 'slow');
+			$('.cloud:nth-of-type(1)').addClass('noanimation');
+		        $('.balloony, .cloud:nth-of-type(1)').animate({left: "+=100px"}, 'slow');
+		        //$('.balloony, .cloud.first').animate({left: "+=100px"}, 'slow');
 		} else {   
 		$('.balloony').animate({left: "+=100px"}, 'slow');}
 		break;

@@ -37,15 +37,15 @@ body {
 	z-index: 10;
 /*	opacity: 0.8;*/
 }
-.first_grid {
-	border: 1px solid red;
+/*.first_grid {
+       	border: 1px solid red;
 }
 .seventh_grid {
 	border: 1px solid red;
 }
 .tenth_grid {
 	border: 1px solid red;
-}
+}*/
 /* ----- BALLOONY ------ */
 .balloony {
 	height: 14%;
@@ -85,4 +85,10 @@ body {
 	50% {
 		transform: translate(10px);
 	}
+}
+/* class to stop anmation */
+.noanimation {
+    -webkit-animation: none;
+       -moz-animation: none;
+            animation: none;
 }
