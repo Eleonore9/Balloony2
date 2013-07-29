@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('span').html("Ballony - left: " + ball_left + ", top: " + ball_top);
     var grid_left = $('.grid.first_grid').offset().left;
     var grid_top = $('.grid.first_grid').offset().top;
-    $('span').append("Grid - left: " + grid_left + ", top: " + grid_top);
+    $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
     $(document).keydown(function(key) {
     	// Use keys to move Ballony around
         switch(parseInt(key.which,10)) {
@@ -17,14 +17,17 @@ $(document).ready(function() {
 		} else {   
                 $('.balloony').animate({left: "-=100px"}, 'slow');
     		$('span').html("left: " + ball_left + ", top: " + ball_top);
+                $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;}
 	    case 68:
 		$('.balloony').animate({top: "+=100px"}, 'slow');
    		$('span').html("left: " + ball_left + ", top: " + ball_top);
+                $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;
 	    case 85:
 		$('.balloony').animate({top: "-=100px"}, 'slow');
     		$('span').html("left: " + ball_left + ", top: " + ball_top);
+                $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;
 	    case 82:
     		if(ball_left === 580 && ball_top === 320) {
@@ -35,6 +38,7 @@ $(document).ready(function() {
 		} else {   
 		$('.balloony').animate({left: "+=100px"}, 'slow');
     		$('span').html("left: " + ball_left + ", top: " + ball_top);
+                $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;}
 	    default:
 	        break;
