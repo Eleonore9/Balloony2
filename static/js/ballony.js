@@ -9,35 +9,45 @@ $(document).ready(function() {
     	// Use keys to move Ballony around
         switch(parseInt(key.which,10)) {
             case 76:
-    		if(ball_left === 580 && ball_top === 320) {
+    		if(ball_left === 480 && ball_top === 320) {
 			$('.cloud:nth-of-type(1)').addClass('noanimation');
 	        	$('.balloony, .cloud:nth-of-type(1)').animate({left: "-=100px"}, 'slow');
+			console.log('Yay! 1st switch case, if condition');
 			//$('.balloony, .cloud.first').animate({left: "-=100px"}, 'slow');
 			break;
 		} else {   
                 $('.balloony').animate({left: "-=100px"}, 'slow');
-    		$('span').html("left: " + ball_left + ", top: " + ball_top);
+    		var ball_left = $('.balloony').offset().left;
+    		var ball_top = $('.balloony').offset().top;
+    		$('span').html("Balloony - left: " + ball_left + ", top: " + ball_top);
                 $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;}
 	    case 68:
 		$('.balloony').animate({top: "+=100px"}, 'slow');
-   		$('span').html("left: " + ball_left + ", top: " + ball_top);
+    		var ball_left = $('.balloony').offset().left;
+    		var ball_top = $('.balloony').offset().top;
+   		$('span').html("Balloony - left: " + ball_left + ", top: " + ball_top);
                 $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;
 	    case 85:
 		$('.balloony').animate({top: "-=100px"}, 'slow');
-    		$('span').html("left: " + ball_left + ", top: " + ball_top);
+    		var ball_left = $('.balloony').offset().left;
+    		var ball_top = $('.balloony').offset().top;
+    		$('span').html("Balloony - left: " + ball_left + ", top: " + ball_top);
                 $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;
 	    case 82:
-    		if(ball_left === 580 && ball_top === 320) {
+    		if(ball_left === 480 && ball_top === 320) {
 			$('.cloud:nth-of-type(1)').addClass('noanimation');
 		        $('.balloony, .cloud:nth-of-type(1)').animate({left: "+=100px"}, 'slow');
+			console.log('Yay! 4th switch case, if condition');
 		        //$('.balloony, .cloud.first').animate({left: "+=100px"}, 'slow');
 			break;
 		} else {   
 		$('.balloony').animate({left: "+=100px"}, 'slow');
-    		$('span').html("left: " + ball_left + ", top: " + ball_top);
+    		var ball_left = $('.balloony').offset().left;
+    		var ball_top = $('.balloony').offset().top;
+    		$('span').html("Balloony - left: " + ball_left + ", top: " + ball_top);
                 $('span').append(" *** Grid - left: " + grid_left + ", top: " + grid_top);
 		break;}
 	    default:
