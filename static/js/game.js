@@ -1,9 +1,9 @@
-function board(width, height) {
-	this.width = width;
-	this.height = height;
-	this.setBoard = function(objectContent) {
-		objectContent.css({"backrgound-color": "black", "height" : "10%", "width" : "10%"});
-	}
+//defining board class
+function board(grid) {
+	this.grid = grid;
+	this.setBoard = function() {
+		$(".content").append(grid * "<div class="grid"></div>");
+	};
 }
-
+//exporting board class
 exports.board = board;

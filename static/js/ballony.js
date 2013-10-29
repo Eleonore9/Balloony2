@@ -1,4 +1,8 @@
+
 $(document).ready(function() {
+	var board = require('./game');
+	var sky = new initClass.board(5);
+    console.log(sky);
     var ball_left = $('.balloony').offset().left;
     var ball_top = $('.balloony').offset().top;
     $('span').html("Ballony - left: " + ball_left + ", top: " + ball_top);
